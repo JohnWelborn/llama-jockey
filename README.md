@@ -13,6 +13,10 @@ llama-jockey  ──(HTTPS, local network)──▶  Caddy  ──(HTTP, localho
   (client)                                (TLS proxy)                      (GPU machine)
 ```
 
+## Disclaimer
+
+This repository was built as an exercise in AI-assisted coding.
+
 ## CLI Setup
 
 ```
