@@ -3,14 +3,14 @@
 
 CLI to control a [llama-server](https://github.com/ggerganov/llama.cpp/releases) running in router mode with multiple models
 ```
-llama-jocket -> llama-server
+llama-jockey -> llama-server
 ```
 
 Optionally over a local network, with [Caddy](https://github.com/caddyserver/caddy/releases) providing TLS termination on the server side.
 
 ```
-llama-jockey  ──(HTTPS, local network)──▶  Caddy  ──(HTTP, localhost)──▶  llama-server
-  (client)                                (TLS proxy)                      (GPU machine)
+llama-jockey  ──(HTTPS, local network)──▶    Caddy    ──(HTTP, localhost)──▶  llama-server
+  (client)                                (TLS proxy)                         (GPU machine)
 ```
 
 ## Disclaimer
@@ -41,11 +41,11 @@ If you use Caddy for TLS termination but you don't install the Caddy root certif
 
 Download a pre-built release from the [Caddy releases page](https://github.com/caddyserver/caddy/releases).
 
-Create a `CaddyFile` alongside `caddy.exe`.
+Create a `Caddyfile` alongside `caddy.exe`.
 
 Optional: `skip_install_trust` avoids installing the self-signed cert into the Windows certificate store — llama-jockey handles trust via fingerprint pinning instead.
 
-**`CaddyFile`**
+**`Caddyfile`**
 ```
 {
     skip_install_trust
@@ -61,7 +61,7 @@ Start Caddy with:
 
 **`START-caddy.bat`**
 ```bat
-C:\path\to\caddy.exe run --config CaddyFile
+C:\path\to\caddy.exe run --config Caddyfile
 pause
 ```
 
