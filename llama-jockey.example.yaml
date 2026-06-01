@@ -1,0 +1,4 @@
+llama:
+  name: My Workstation
+  url: http://llm-server:8081
+  api_key: my-secret-token
